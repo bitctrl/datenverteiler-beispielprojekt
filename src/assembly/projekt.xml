@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3 http://maven.apache.org/xsd/assembly-1.1.3.xsd">
+    <id>projekt</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <baseDirectory>${project.artifactId}</baseDirectory>
+    <fileSets>
+        <fileSet>
+            <directory>${project.build.directory}/dependency</directory>
+            <outputDirectory>distributionspakete</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/src/main/archiv</directory>
+            <outputDirectory>archiv</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/src/main/debug</directory>
+            <outputDirectory>debug</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/src/main/konfiguration</directory>
+            <outputDirectory>konfiguration</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/src/main/parameter</directory>
+            <outputDirectory>parameter</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/src/main/skripte/bash</directory>
+            <outputDirectory>skripte-bash</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/src/main/skripte/batch</directory>
+            <outputDirectory>skripte-batch</outputDirectory>
+        </fileSet>
+    </fileSets>
+</assembly>
